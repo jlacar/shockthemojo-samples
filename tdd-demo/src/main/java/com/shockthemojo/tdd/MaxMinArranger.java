@@ -7,7 +7,21 @@ public class MaxMinArranger {
 			return new int[] {};
 		}
 		
-		return new int[] {7, 1};
+		return rearrange(nums);
+	}
+
+	private int[] rearrange(int[] nums) {
+		for (int i = 0; i < nums.length - 1; i++) {
+			for (int j = i + 1; j < nums.length; j++) {
+				boolean swap = (i % 2 == 0) ? nums[i] < nums[j] : nums[i] > nums[j];
+				if (swap) {
+					int temp = nums[i];
+					nums[i] = nums[j];
+					nums[j] = temp;
+				}
+			}
+		}
+		return nums;
 	}
 
 }
