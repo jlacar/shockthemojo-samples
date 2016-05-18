@@ -13,5 +13,15 @@ public class MaxMinArrangerTest {
 		
 		assertArrayEquals(new int[] {7, 1}, result);
 	}
+	
+	@Test
+	public void empty_array() throws Exception {
+		MaxMinArranger testSubject = new MaxMinArranger();
+		int[] result = testSubject.arrange();
+		
+		assertArrayEquals(new int[] {}, result);
+	}
+	
+
 
 }
