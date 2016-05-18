@@ -10,6 +10,8 @@ public class MaxMinArrangerTest {
 	public void test() {
 		MaxMinArranger testSubject = new MaxMinArranger();
 		int[] result = testSubject.arrange(1, 7);
+		
+		assertArrayEquals(new int[] {7, 1}, result);
 	}
 
 }
