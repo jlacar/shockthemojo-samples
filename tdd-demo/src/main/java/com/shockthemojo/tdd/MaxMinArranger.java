@@ -11,14 +11,18 @@ public class MaxMinArranger {
 	}
 
 	private int[] rearrange(int[] nums) {
-		for (int i = 0; i < nums.length - 1; i++) {
-			for (int j = i + 1; j < nums.length; j++) {
-				if (shouldSwap(nums, i, j)) {
-					swap(nums, i, j);
-				}
-			}
+		for (int startFrom = 0; startFrom < nums.length - 1; startFrom++) {
+			arrangeRest(nums, startFrom);
 		}
 		return nums;
+	}
+
+	public void arrangeRest(int[] nums, int first) {
+		for (int other = first + 1; other < nums.length; other++) {
+			if (shouldSwap(nums, first, other)) {
+				swap(nums, first, other);
+			}
+		}
 	}
 
 	public void swap(int[] nums, int i, int j) {
@@ -27,8 +31,12 @@ public class MaxMinArranger {
 		nums[j] = temp;
 	}
 
-	public boolean shouldSwap(int[] nums, int i, int j) {
-		return (i % 2 == 0) ? nums[i] < nums[j] : nums[i] > nums[j];
+	public boolean shouldSwap(int[] nums, int first, int other) {
+		return otherIsLargerThan(first) ? nums[first] < nums[other] : nums[first] > nums[other];
+	}
+
+	public boolean otherIsLargerThan(int first) {
+		return first % 2 == 0;
 	}
 
 }
