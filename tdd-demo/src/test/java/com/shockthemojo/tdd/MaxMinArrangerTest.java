@@ -9,6 +9,7 @@ public class MaxMinArrangerTest {
 	@Test
 	public void test() {
 		MaxMinArranger testSubject = new MaxMinArranger();
+		int[] result = testSubject.arrange(1, 7);
 	}
 
 }
