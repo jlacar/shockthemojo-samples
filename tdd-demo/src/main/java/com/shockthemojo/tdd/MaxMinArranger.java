@@ -17,7 +17,7 @@ public class MaxMinArranger {
 		return nums;
 	}
 
-	public void arrangeRest(int[] nums, int first) {
+	private void arrangeRest(int[] nums, int first) {
 		for (int other = first + 1; other < nums.length; other++) {
 			if (shouldSwap(nums, first, other)) {
 				swap(nums, first, other);
@@ -25,17 +25,17 @@ public class MaxMinArranger {
 		}
 	}
 
-	public void swap(int[] nums, int i, int j) {
+	private void swap(int[] nums, int i, int j) {
 		int temp = nums[i];
 		nums[i] = nums[j];
 		nums[j] = temp;
 	}
 
-	public boolean shouldSwap(int[] nums, int first, int other) {
+	private boolean shouldSwap(int[] nums, int first, int other) {
 		return otherIsLargerThan(first) ? nums[first] < nums[other] : nums[first] > nums[other];
 	}
 
-	public boolean otherIsLargerThan(int first) {
+	private boolean otherIsLargerThan(int first) {
 		return first % 2 == 0;
 	}
 
