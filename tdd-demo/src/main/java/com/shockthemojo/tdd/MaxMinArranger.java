@@ -13,15 +13,22 @@ public class MaxMinArranger {
 	private int[] rearrange(int[] nums) {
 		for (int i = 0; i < nums.length - 1; i++) {
 			for (int j = i + 1; j < nums.length; j++) {
-				boolean swap = (i % 2 == 0) ? nums[i] < nums[j] : nums[i] > nums[j];
-				if (swap) {
-					int temp = nums[i];
-					nums[i] = nums[j];
-					nums[j] = temp;
+				if (shouldSwap(nums, i, j)) {
+					swap(nums, i, j);
 				}
 			}
 		}
 		return nums;
+	}
+
+	public void swap(int[] nums, int i, int j) {
+		int temp = nums[i];
+		nums[i] = nums[j];
+		nums[j] = temp;
+	}
+
+	public boolean shouldSwap(int[] nums, int i, int j) {
+		return (i % 2 == 0) ? nums[i] < nums[j] : nums[i] > nums[j];
 	}
 
 }
