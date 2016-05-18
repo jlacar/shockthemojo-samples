@@ -8,7 +8,7 @@ public class MaxMinArrangerTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		MaxMinArranger testSubject = new MaxMinArranger();
 	}
 
 }
