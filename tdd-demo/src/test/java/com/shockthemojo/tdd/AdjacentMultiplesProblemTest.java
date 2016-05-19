@@ -19,6 +19,6 @@ public class AdjacentMultiplesProblemTest {
 
 	@Test(expected=IllegalArgumentException.class)
 	public void should_reject_null_with_IllegalArgumentException() throws Exception {
-		AdjacentMultiples testSubject = new AdjacentMultiplesProblem();
+		AdjacentMultiplesProblem testSubject = new AdjacentMultiplesProblem();
 	}
 }
