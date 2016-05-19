@@ -22,4 +22,10 @@ public class AdjacentMultiplesProblemTest {
 		AdjacentMultiplesProblem testSubject = new AdjacentMultiplesProblem();
 		testSubject.check(null);
 	}
+	
+	@Test
+	public void should_return_false_for_empty_array() throws Exception {
+		AdjacentMultiplesProblem testSubject = new AdjacentMultiplesProblem();
+		assertFalse(testSubject.check(new int[] {}));
+	}
 }
