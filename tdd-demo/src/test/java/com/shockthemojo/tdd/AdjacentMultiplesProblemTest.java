@@ -17,4 +17,8 @@ public class AdjacentMultiplesProblemTest {
 	 * invalid input.
 	 */
 
+	@Test(expected=IllegalArgumentException.class)
+	public void should_reject_null_with_IllegalArgumentException() throws Exception {
+		
+	}
 }
