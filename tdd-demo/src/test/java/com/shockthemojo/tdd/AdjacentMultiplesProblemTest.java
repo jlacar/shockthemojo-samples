@@ -17,15 +17,16 @@ public class AdjacentMultiplesProblemTest {
 	 * invalid input.
 	 */
 
+	private AdjacentMultiplesProblem testSubject = new AdjacentMultiplesProblem();
+	
 	@Test(expected=IllegalArgumentException.class)
 	public void should_reject_null_with_IllegalArgumentException() throws Exception {
-		AdjacentMultiplesProblem testSubject = new AdjacentMultiplesProblem();
 		testSubject.check(null);
 	}
 	
 	@Test
 	public void should_return_false_for_empty_array() throws Exception {
-		AdjacentMultiplesProblem testSubject = new AdjacentMultiplesProblem();
 		assertFalse(testSubject.check(new int[] {}));
 	}
+	
 }
