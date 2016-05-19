@@ -29,4 +29,8 @@ public class AdjacentMultiplesProblemTest {
 		assertFalse(testSubject.check(new int[] {}));
 	}
 	
+	@Test
+	public void should_return_false_for_array_with_one_element() throws Exception {
+		assertFalse(testSubject.check(new int[] {1}));
+	}
 }
