@@ -11,7 +11,12 @@ public class AdjacentMultiplesProblem {
 			return false;
 		}
 		
-		return true;
+		for (int i = 1; i < numbers.length; i++) {
+			if (numbers[i] == numbers[i-1] * 10)
+				return true;
+		}
+		
+		return false;
 	}
 
 }
