@@ -7,10 +7,6 @@ public class AdjacentMultiplesProblem {
 			throw new IllegalArgumentException("Argument cannot be null.");
 		}
 		
-		if (numbers.length < 2) {
-			return false;
-		}
-		
 		for (int i = 1; i < numbers.length; i++) {
 			if (numbers[i] == numbers[i-1] * 10)
 				return true;
