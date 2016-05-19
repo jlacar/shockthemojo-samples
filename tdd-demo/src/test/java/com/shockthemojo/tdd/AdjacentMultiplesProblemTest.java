@@ -33,4 +33,9 @@ public class AdjacentMultiplesProblemTest {
 	public void should_return_false_for_array_with_one_element() throws Exception {
 		assertFalse(testSubject.check(new int[] {1}));
 	}
+	
+	@Test
+	public void should_return_false_when_no_adjacent_multiple() throws Exception {
+		assertFalse(testSubject.check(new int[] {1, 4}));
+	}
 }
