@@ -41,6 +41,6 @@ public class AdjacentMultiplesProblemTest {
 	
 	@Test
 	public void should_return_true_when_adjacent_multiples_exist() throws Exception {
-		assertFalse(testSubject.check(new int[] {1, 40, 400}));	
+		assertTrue(testSubject.check(new int[] {1, 40, 400}));	
 	}
 }
