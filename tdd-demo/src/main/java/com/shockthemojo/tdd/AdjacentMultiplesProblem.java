@@ -6,6 +6,11 @@ public class AdjacentMultiplesProblem {
 		if (numbers == null) {
 			throw new IllegalArgumentException("Argument cannot be null.");
 		}
+		
+		if (numbers.length < 2) {
+			return false;
+		}
+		
 		return true;
 	}
 
